@@ -7,9 +7,13 @@
     tools:context=".Login">
 
     <Button
-        android:id="@+id/signup_Button"
+        android:text="회원가입"
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="회원가입 엑티비티"/>
 </LinearLayout>

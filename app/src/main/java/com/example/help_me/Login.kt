@@ -3,6 +3,7 @@ package com.example.help_me
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.help_me.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -21,8 +22,8 @@ class Login : AppCompatActivity() {
         mbinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        var id = ""
-        var password = ""
+        var id = "HamTory"
+        var password = "password"
 
         //회원가입 창으로
         binding.goSignup.setOnClickListener {
@@ -51,6 +52,8 @@ class Login : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                         moveMainPage(auth?.currentUser)
+                        Log.d("상태","id : ${email}, password : ${password}")
+                        Log.d("상태","${task.toString()}")
                     } else {
                         Toast.makeText(
                             baseContext, "로그인에 실패 하였습니다.",

@@ -6,12 +6,20 @@
     android:layout_height="match_parent">
 
     <Button
+        android:text="회원가입"
         android:id="@+id/go_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
+        android:text="로그인"
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="로그인 엑티비티"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

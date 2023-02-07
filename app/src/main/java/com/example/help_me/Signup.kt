@@ -18,11 +18,12 @@ class Signup : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
+        mbinding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         auth = Firebase.auth
-        var email = ""
-        var password = ""
-        binding.signupButton.setOnClickListener {
+        var email = "HamTory"
+        var password = "password"
+        binding.signup.setOnClickListener {
             createAccount(email,password)
         }
     }
