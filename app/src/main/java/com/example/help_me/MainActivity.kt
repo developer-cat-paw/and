@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
     private var auth : FirebaseAuth ?= null
     private lateinit var databaseRef: DatabaseReference
     lateinit var storage: FirebaseStorage
+    private val database = Firebase.database("https://sexy-b53e8-default-rtdb.asia-southeast1.firebasedatabase.app/")
+
+    private val data = database.getReference("data")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mbinding = ActivityMainBinding.inflate(layoutInflater)
@@ -45,6 +50,21 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "실패", Toast.LENGTH_SHORT).show()
         }
 
+        data.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val test = snapshot.child("data")
+                for(i in test.children){
+                    Log.d("상태","성공 : ${i.children}")
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                //읽어오기에 실패했을 때
+                Log.d("상태","error : ${error.message}")
+            }
+
+        })
+
         //로그아웃
         binding.logout.setOnClickListener {
             //로그인 화면으로
@@ -53,25 +73,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             auth?.signOut()
         }
-
-//        databaseRef.addValueEventListener(object : ValueEventListener{
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                //원하는 함수 실행
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                Log.d("상태","error : ${error.toException()}")
-//            }
-//
-//        })
-    }
-
-
-    private fun firebasestorage(){
-        val storage = Firebase.storage
-
-        var storageRef = storage.reference
-
-        var imagesRef: StorageReference ?= storageRef.child("")
     }
 }

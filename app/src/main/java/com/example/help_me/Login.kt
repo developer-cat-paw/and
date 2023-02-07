@@ -59,10 +59,10 @@ class Login : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                         moveMainPage(auth?.currentUser)
-                        Log.d("상태","id : ${email}, password : ${password}")
-                        Log.d("상태","${task.toString()}")
+//                        Log.d("상태","id : ${email}, password : ${password}")
+//                        Log.d("상태","${task.toString()}")
                     } else {
-                        Log.d("상태","id : ${email}, password : ${password}")
+//                        Log.d("상태","id : ${email}, password : ${password}")
                         Toast.makeText(
                             baseContext, "로그인에 실패 하였습니다.",
                             Toast.LENGTH_SHORT

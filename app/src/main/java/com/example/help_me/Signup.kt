@@ -27,8 +27,8 @@ class Signup : AppCompatActivity() {
             binding.signup.setOnClickListener {
                 var email = binding.id.text.toString()
                 var password = binding.password.text.toString()
-                Log.d("상태","id: ${email} password: ${password}")
-                Log.d("상태","1 : ${binding.password} 2 : ${binding.password}")
+//                Log.d("상태","id: ${email} password: ${password}")
+//                Log.d("상태","1 : ${binding.password1.text.toString()} 2 : ${binding.password.text.toString()}")
                 createAccount(email,password)
             }
         }
@@ -39,6 +39,7 @@ class Signup : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this) { task ->
                     if(task.isSuccessful){
+
                         toast("계정 생성 완료")
                         startActivity(Intent(this,Profile::class.java))
                         finish()

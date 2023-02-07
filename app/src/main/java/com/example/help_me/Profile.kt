@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.help_me.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class Profile : AppCompatActivity() {
@@ -18,6 +19,11 @@ class Profile : AppCompatActivity() {
     private val binding get() = mbinding!!
 
     private var auth : FirebaseAuth?= null
+
+    private val database = Firebase.database("https://sexy-b53e8-default-rtdb.asia-southeast1.firebasedatabase.app/")
+    private val name = database.getReference("name")
+    private val text = database.getReference("text")
+    private val profileImage = database.getReference("profileImage")
 
     private val OPEN_GALLERY = 1
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,10 +44,12 @@ class Profile : AppCompatActivity() {
             auth?.signOut()
         }
         binding.saveProfile.setOnClickListener {
-            Log.d("상태","onclick_saveProfile_button")
-            val text: String = binding.introduction.text.toString()
-            val name: String = binding.name.text.toString()
-            val ios: Boolean
+//            Log.d("상태","onclick_saveProfile_button")
+            name.setValue(binding.name.text.toString())
+            text.setValue(binding.introduction.text.toString())
+            profileImage.setValue(binding.profileimage.toString())
+            Log.d("상태","saveProfile")
+            Log.d("상태","name : $name text : $text profileImage : $profileImage")
         }
     }
 
