@@ -1,5 +1,6 @@
 package com.example.help_me
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,16 +37,14 @@ class Signup : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if(task.isSuccessful){
                         toast("계정 생성 완료")
+                        startActivity(Intent(this,Profile::class.java))
                         finish()
-                    } else {
+                    } else
                         toast("계정 생성 실패")
                     }
                 }
         }
-    }
-
     private fun toast(m: String){
         Toast.makeText(this,m,Toast.LENGTH_SHORT).show()
     }
-
 }

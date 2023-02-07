@@ -18,11 +18,10 @@
 
     <EditText
         android:id="@+id/password"
-        style="@style/text"
+        app:style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:elevation="5dp"
         android:layout_marginTop="260dp"
         android:hint="   Name"
         android:textColorHint="#80000000"
@@ -31,18 +30,60 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/rectangle_9"
+        android:id="@+id/introduction"
         android:layout_width="298dp"
         android:layout_height="155dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="332dp"
+        android:text="15sp"
+        android:elevation="100dp"
+        android:padding="10dp"
+        android:textColor="#80000000"
         android:hint="introduction"
-        android:textColorHint="#80000000"
         android:background="@drawable/introduction"
+        android:textColorHint="#80000000"
+        android:gravity="top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introduction">
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20sp"
+                    android:backgroundTint="#B1FFF6"
+                    android:text="And"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="#FFB1B1"
+                    android:text="iOS"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="#B7FFB1"
+                    android:text="Web"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="#B1B4FF"
+                    android:text="Sever"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="#F9FFB1"
+                    android:text="Ai"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="#F4B1FF"
+                    android:text="Design"/>
+
+    </com.google.android.material.chip.ChipGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
