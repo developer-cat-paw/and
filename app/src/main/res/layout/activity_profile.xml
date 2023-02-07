@@ -10,7 +10,7 @@
         android:id="@+id/profileimage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/profile_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,11 +25,11 @@
         app:layout_constraintEnd_toEndOf="@+id/profileimage" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="240dp"
         android:hint="Name"
         android:paddingStart="20dp"
         android:backgroundTint="#E9ECEF"
@@ -40,23 +40,88 @@
 
     <EditText
         android:id="@+id/introduction"
-        android:layout_width="298dp"
+        android:layout_width="300dp"
         android:layout_height="155dp"
-        android:layout_marginTop="332dp"
-        android:elevation="100dp"
-        android:padding="10dp"
-        android:backgroundTint="#E9ECEF"
-        android:textColor="#80000000"
-        android:hint="introduction"
+        android:layout_marginTop="300dp"
         android:background="@drawable/introduction"
-        android:textColorHint="#80000000"
+        android:backgroundTint="#E9ECEF"
+        android:elevation="100dp"
         android:gravity="top"
+        android:hint="introduction"
+        android:padding="10dp"
+        android:textColor="#80000000"
+        android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_radio_button"
+            android:backgroundTint="#B1FFF6"
+            android:text="Android"/>
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_radio_button"
+            android:backgroundTint="#FFB1B1"
+            android:text="iOS"/>
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B7FFB1"
+            android:background="@drawable/selector_radio_button"
+            android:text="Web"/>
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:backgroundTint="#B1B4FF"
+            android:background="@drawable/selector_radio_button"
+            android:text="Sever"/>
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:backgroundTint="#F9FFB1"
+            android:background="@drawable/selector_radio_button"
+            android:text="Ai"/>
+        <RadioButton
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:backgroundTint="#F4B1FF"
+            android:background="@drawable/selector_radio_button"
+            android:text="Design"/>
+    </RadioGroup>
+
     <Button
-        android:id="@+id/rectangle_8"
+        android:id="@+id/save_profile"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_centerHorizontal="true"
@@ -73,92 +138,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/Android"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#B1FFF6"
-            android:elevation="3dp"
-            android:text="And"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <Button
-            android:id="@+id/iOS"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#FFB1B1"
-            android:elevation="3dp"
-            android:text="iOS"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <Button
-            android:id="@+id/Web"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#B7FFB1"
-            android:elevation="3dp"
-            android:text="Web"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <Button
-            android:id="@+id/Sever"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#B1B4FF"
-            android:elevation="3dp"
-            android:text="Sever"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <Button
-            android:id="@+id/Ai"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#F9FFB1"
-            android:elevation="3dp"
-            android:text="Sever"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <Button
-            android:id="@+id/Design"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_round"
-            android:backgroundTint="#F4B1FF"
-            android:elevation="3dp"
-            android:text="Design"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </LinearLayout>
 
     <Button
-        android:id="@+id/rectangle_1"
+        android:id="@+id/logout"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/profile_logout_button"

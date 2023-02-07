@@ -33,21 +33,11 @@ class Login : AppCompatActivity() {
         binding.signup.setOnClickListener {
             startActivity(Intent(this,Signup::class.java))
         }
+
         binding.login.setOnClickListener {
             var email = binding.id.text.toString()
             var password = binding.password.text.toString()
             signIn(email,password)
-        }
-//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestIdToken(getString(R.string.default_web_client_id))
-//            .requestEmail()
-//            .build()
-//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-
-        if (auth!!.getCurrentUser() != null) {
-            val intent = Intent(application, MainActivity::class.java)
-            startActivity(intent)
-            finish()
         }
     }
 
@@ -72,6 +62,7 @@ class Login : AppCompatActivity() {
                         Log.d("상태","id : ${email}, password : ${password}")
                         Log.d("상태","${task.toString()}")
                     } else {
+                        Log.d("상태","id : ${email}, password : ${password}")
                         Toast.makeText(
                             baseContext, "로그인에 실패 하였습니다.",
                             Toast.LENGTH_SHORT

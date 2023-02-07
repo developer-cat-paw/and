@@ -23,11 +23,14 @@ class Signup : AppCompatActivity() {
         mbinding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        binding.signup.setOnClickListener {
-            var email = binding.id.text.toString()
-            var password = binding.password.text.toString()
-            Log.d("상태","id: ${email} password: ${password}")
-            createAccount(email,password)
+        if(binding.password1.text.toString() == binding.password.text.toString()){
+            binding.signup.setOnClickListener {
+                var email = binding.id.text.toString()
+                var password = binding.password.text.toString()
+                Log.d("상태","id: ${email} password: ${password}")
+                Log.d("상태","1 : ${binding.password} 2 : ${binding.password}")
+                createAccount(email,password)
+            }
         }
     }
 
