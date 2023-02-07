@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Help_me</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign up</string>
 </resources>

@@ -1,14 +1,15 @@
 package com.example.help_me
 
+import android.R
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.Target
 import com.example.help_me.databinding.ActivityLoginBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -20,6 +21,8 @@ class Login : AppCompatActivity() {
     private val binding get() = mbinding!!
 
     private var auth: FirebaseAuth ?= null
+
+    private var mGoogleSignInClient: GoogleSignInClient? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mbinding = ActivityLoginBinding.inflate(layoutInflater)
@@ -27,13 +30,24 @@ class Login : AppCompatActivity() {
         auth = Firebase.auth
 
         //회원가입 창으로
-        binding.goSignup.setOnClickListener {
+        binding.signup.setOnClickListener {
             startActivity(Intent(this,Signup::class.java))
         }
         binding.login.setOnClickListener {
             var email = binding.id.text.toString()
             var password = binding.password.text.toString()
             signIn(email,password)
+        }
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        if (auth!!.getCurrentUser() != null) {
+            val intent = Intent(application, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -69,7 +83,7 @@ class Login : AppCompatActivity() {
 
 
     fun moveMainPage(user: FirebaseUser?){
-        if( user!= null){
+        if(user != null){
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
