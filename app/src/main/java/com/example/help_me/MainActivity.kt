@@ -1,5 +1,6 @@
 package com.example.help_me
 
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.help_me.databinding.ActivityMainBinding

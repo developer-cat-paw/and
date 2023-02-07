@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "229263644263",
+    "project_id": "sexy-b53e8",
+    "storage_bucket": "sexy-b53e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229263644263:android:ba5cbf99608b4c269366c2",
+        "android_client_info": {
+          "package_name": "com.example.help_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229263644263-kuebpnchkib4tehldarhblp5lehia0li.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.help_me",
+            "certificate_hash": "b816ed2737ad0659cef27aea00cc339b90f50ad4"
+          }
+        },
+        {
+          "client_id": "229263644263-mu4v928ov75ba6sanjhsn06i3ilarue9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDamtXlQq4gcFCr-8XRhKKioyQB2Vz9mhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229263644263-mu4v928ov75ba6sanjhsn06i3ilarue9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "229263644263-f3k9aes3tdgiljcko3if6es4j0qrapse.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Hckerton.Help-me"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
