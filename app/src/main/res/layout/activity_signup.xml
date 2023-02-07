@@ -24,10 +24,11 @@
         android:layout_marginBottom="240dp"
         android:background="@drawable/edittext_background"
         android:elevation="10dp"
-        android:hint="     confirm password"
+        android:backgroundTint="#E9ECEF"
+        android:hint="confirm password"
+        android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -38,7 +39,9 @@
         android:layout_marginBottom="300dp"
         android:background="@drawable/edittext_background"
         android:elevation="10dp"
-        android:hint="     password"
+        android:backgroundTint="#E9ECEF"
+        android:paddingStart="20dp"
+        android:hint="password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -50,8 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="380dp"
         android:background="@drawable/edittext_background"
+        android:backgroundTint="#E9ECEF"
         android:elevation="10dp"
-        android:hint="     id"
+        android:paddingStart="20dp"
+        android:hint="id"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

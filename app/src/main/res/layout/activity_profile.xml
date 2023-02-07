@@ -7,23 +7,32 @@
     tools:context=".Profile">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="125dp"
-        android:layout_height="117dp"
+        android:id="@+id/profileimage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/profile_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/profileimageedit"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/edit"
+        app:layout_constraintBottom_toBottomOf="@+id/profileimage"
+        app:layout_constraintEnd_toEndOf="@+id/profileimage" />
+
     <EditText
         android:id="@+id/password"
-        app:style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:layout_marginTop="260dp"
-        android:hint="   Name"
+        android:hint="Name"
+        android:paddingStart="20dp"
+        android:backgroundTint="#E9ECEF"
         android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +43,9 @@
         android:layout_width="298dp"
         android:layout_height="155dp"
         android:layout_marginTop="332dp"
-        android:text="15sp"
         android:elevation="100dp"
         android:padding="10dp"
+        android:backgroundTint="#E9ECEF"
         android:textColor="#80000000"
         android:hint="introduction"
         android:background="@drawable/introduction"
@@ -46,44 +55,125 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/rectangle_8"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:text="Save_profile"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/pretendard"
+        android:background="@drawable/profile_save_button"
+        android:layout_marginBottom="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/introduction">
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20sp"
-                    android:backgroundTint="#B1FFF6"
-                    android:text="And"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#FFB1B1"
-                    android:text="iOS"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#B7FFB1"
-                    android:text="Web"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#B1B4FF"
-                    android:text="Sever"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#F9FFB1"
-                    android:text="Ai"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="#F4B1FF"
-                    android:text="Design"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </com.google.android.material.chip.ChipGroup>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/Android"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#B1FFF6"
+            android:elevation="3dp"
+            android:text="And"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/iOS"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#FFB1B1"
+            android:elevation="3dp"
+            android:text="iOS"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/Web"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#B7FFB1"
+            android:elevation="3dp"
+            android:text="Web"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/Sever"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#B1B4FF"
+            android:elevation="3dp"
+            android:text="Sever"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/Ai"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#F9FFB1"
+            android:elevation="3dp"
+            android:text="Sever"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/Design"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="#F4B1FF"
+            android:elevation="3dp"
+            android:text="Design"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rectangle_1"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="@drawable/profile_logout_button"
+        android:layout_marginBottom="20dp"
+        android:text="Logout"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/pretendard"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

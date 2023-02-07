@@ -22,8 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:hint="     password"
+        android:hint="password"
         android:layout_marginBottom="300dp"
+        android:backgroundTint="#E9ECEF"
+        android:paddingStart="20dp"
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,9 +39,12 @@
         android:layout_marginBottom="380dp"
         android:background="@drawable/edittext_background"
         android:elevation="10dp"
-        android:hint="     id"
+        android:backgroundTint="#E9ECEF"
+        android:hint="id"
+        android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
