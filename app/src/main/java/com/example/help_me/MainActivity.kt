@@ -18,8 +18,6 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private var mbinding: ActivityMainBinding ?= null
@@ -42,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             Glide.with(applicationContext)
                 .load(uri)
                 .into(binding.img)
+            Toast.makeText(this,"성공",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener { //이미지 로드 실패시
             Toast.makeText(applicationContext, "실패", Toast.LENGTH_SHORT).show()
         }
@@ -55,16 +54,16 @@ class MainActivity : AppCompatActivity() {
             auth?.signOut()
         }
 
-        databaseRef.addValueEventListener(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                //원하는 함수 실행
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.d("상태","error : ${error.toException()}")
-            }
-
-        })
+//        databaseRef.addValueEventListener(object : ValueEventListener{
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                //원하는 함수 실행
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                Log.d("상태","error : ${error.toException()}")
+//            }
+//
+//        })
     }
 
 

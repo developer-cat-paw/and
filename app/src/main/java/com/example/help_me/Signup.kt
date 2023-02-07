@@ -2,6 +2,7 @@ package com.example.help_me
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.help_me.databinding.ActivityLoginBinding
 import com.example.help_me.databinding.ActivitySignupBinding
@@ -21,9 +22,10 @@ class Signup : AppCompatActivity() {
         mbinding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        var email = "ghkdwndhks@gmail.com"
-        var password = "20060304a!"
         binding.signup.setOnClickListener {
+            var email = binding.id.text.toString()
+            var password = binding.password.text.toString()
+            Log.d("상태","id: ${email} password: ${password}")
             createAccount(email,password)
         }
     }

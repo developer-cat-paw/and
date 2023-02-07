@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
 
 
 class Login : AppCompatActivity() {
@@ -26,15 +25,15 @@ class Login : AppCompatActivity() {
         mbinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        var id = "ghkdwndhks@gmail.com"
-        var password = "20060304a!"
 
         //회원가입 창으로
         binding.goSignup.setOnClickListener {
             startActivity(Intent(this,Signup::class.java))
         }
         binding.login.setOnClickListener {
-            signIn(id,password)
+            var email = binding.id.text.toString()
+            var password = binding.password.text.toString()
+            signIn(email,password)
         }
     }
 
