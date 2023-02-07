@@ -21,8 +21,8 @@ class Signup : AppCompatActivity() {
         mbinding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        var email = "HamTory"
-        var password = "password"
+        var email = "ghkdwndhks@gmail.com"
+        var password = "20060304a!"
         binding.signup.setOnClickListener {
             createAccount(email,password)
         }
@@ -30,8 +30,8 @@ class Signup : AppCompatActivity() {
 
     private fun createAccount(email: String, password: String){
         if(email.isNotEmpty() && password.isNotEmpty()){
-            auth?.createUserWithEmailAndPassword(email,password)
-                ?.addOnCompleteListener(this) { task ->
+            auth.createUserWithEmailAndPassword(email,password)
+                .addOnCompleteListener(this) { task ->
                     if(task.isSuccessful){
                         toast("계정 생성 완료")
                         finish()

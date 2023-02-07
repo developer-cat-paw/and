@@ -1,16 +1,20 @@
 package com.example.help_me
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.Target
 import com.example.help_me.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
+import com.google.firebase.storage.FirebaseStorage
+
 
 class Login : AppCompatActivity() {
     private var mbinding: ActivityLoginBinding ?= null
@@ -22,8 +26,8 @@ class Login : AppCompatActivity() {
         mbinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        var id = "HamTory"
-        var password = "password"
+        var id = "ghkdwndhks@gmail.com"
+        var password = "20060304a!"
 
         //회원가입 창으로
         binding.goSignup.setOnClickListener {
