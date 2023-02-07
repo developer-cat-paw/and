@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style android:name="introductio"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:name="android:textSize">
+        15sp
+    </item>
+
+    <item android:name="android:textColor">
+        #80000000
+    </item>
+
+</style>
+

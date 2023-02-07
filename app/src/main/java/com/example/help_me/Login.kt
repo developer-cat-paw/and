@@ -38,11 +38,11 @@ class Login : AppCompatActivity() {
             var password = binding.password.text.toString()
             signIn(email,password)
         }
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//            .requestIdToken(getString(R.string.default_web_client_id))
+//            .requestEmail()
+//            .build()
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
         if (auth!!.getCurrentUser() != null) {
             val intent = Intent(application, MainActivity::class.java)

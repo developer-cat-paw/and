@@ -6,42 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <Button
-        android:id="@+id/signup"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입"
+        android:layout_marginBottom="240dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="10dp"
+        android:hint="     confirm password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password1"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="10dp"
+        android:hint="     password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/id"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="아이디"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="비밀번호"
-        app:layout_constraintBottom_toTopOf="@+id/signup"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/edittext_background"
+        android:elevation="10dp"
+        android:hint="     id"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="회원가입 엑티비티"
-        android:textSize="50dp"
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/sign_in_background"
+        android:backgroundTint="#2F8EFE"
+        android:elevation="5dp"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
