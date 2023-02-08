@@ -1,6 +1,9 @@
 package com.example.help_me
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +42,19 @@ class MainRecyclerAdapter(val itemList: ArrayList<MainItem>) :
         holder.itemtitle.text = itemList[position].title
         holder.itemdetail.text = itemList[position].detail
         holder.item.text = itemList[position].item
+        if(holder.item.text == "And"){
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(177,255,246)) //안드로이드
+        } else if(holder.item.text == "iOS"){
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(249,255,177)) //iOS
+        } else if(holder.item.text == "Web"){
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(244,177,255)) //Web
+        } else if(holder.item.text == "Sever"){
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(177,180,255)) //서버
+        } else if(holder.item.text == "Ai"){
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(255,177,177)) //ai
+        } else{
+            holder.item.backgroundTintList = ColorStateList.valueOf(Color.rgb(183,255,177)) //디자인
+        }
     }
 
     // 3. Return the size of your dataset (invoked by the layout manager)

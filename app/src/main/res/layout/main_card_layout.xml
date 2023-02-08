@@ -45,6 +45,7 @@
                 card_view:layout_constraintStart_toEndOf="@+id/item_title"
                 card_view:layout_constraintTop_toTopOf="@id/item_image"
                 android:text="And"
+                android:textAllCaps="false"
                 android:textSize="11sp"
                 android:layout_width="46dp"
                 android:layout_height="25dp"

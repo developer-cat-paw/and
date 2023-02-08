@@ -1,16 +1,12 @@
 package com.example.help_me
 
 import android.content.Intent
-import android.graphics.Rect
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.help_me.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,7 +17,6 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 
 class MainActivity : AppCompatActivity() {
@@ -84,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         cateList.add(ListItem("And"))
         cateList.add(ListItem("Web"))
-        cateList.add(ListItem("ios"))
+        cateList.add(ListItem("iOS"))
         cateList.add(ListItem("Sever"))
         cateList.add(ListItem("Ai"))
         cateList.add(ListItem("Design"))
@@ -103,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
         itemList.add(MainItem(a, "이경민", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "And"))
         itemList.add(MainItem(a, "김명준", "응아니야 봉구스봉구스봉구스봉구스봉구스밥버거 보연유혁녹.셔홍겨ㅏ", "Web"))
-        itemList.add(MainItem(a, "최시훈", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "ios"))
+        itemList.add(MainItem(a, "최시훈", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "iOS"))
         itemList.add(MainItem(a, "장범준", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "Sever"))
         itemList.add(MainItem(a, "황주완", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "Ai"))
         itemList.add(MainItem(a, "모성현", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "Design"))

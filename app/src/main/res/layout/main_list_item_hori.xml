@@ -13,6 +13,7 @@
         android:text="And"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="16sp"
+        android:textAllCaps="false"
         android:layout_width="93.1dp"
         android:layout_height="38.8dp"
         android:layout_marginStart="10dp"
