@@ -17,6 +17,7 @@ data class MainItem(val image: Uri?, val title: String, val detail: String, val 
 
 class MainRecyclerAdapter(val itemList: ArrayList<MainItem>) :
     RecyclerView.Adapter<MainRecyclerAdapter.MyViewHolder>() {
+
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var itemimage: ImageView = itemView.findViewById(R.id.item_image)
         var itemtitle: TextView = itemView.findViewById(R.id.item_title)

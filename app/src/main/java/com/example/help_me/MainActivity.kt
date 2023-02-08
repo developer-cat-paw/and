@@ -5,6 +5,10 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.help_me.databinding.ActivityMainBinding
@@ -22,6 +26,9 @@ import com.google.firebase.storage.ktx.storage
 class MainActivity : AppCompatActivity() {
     private var mbinding: ActivityMainBinding ?= null
     private val binding get() = mbinding!!
+    private lateinit var recyclerview_main : RecyclerView
+
+    var livedata: MutableLiveData<String> = MutableLiveData()
 
     private var auth : FirebaseAuth ?= null
     private lateinit var databaseRef: DatabaseReference
@@ -71,7 +78,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
         val recyclerview_list = findViewById<RecyclerView>(R.id.recyclerHorizon)
 
         val cateList = ArrayList<ListItem>()
@@ -85,17 +91,16 @@ class MainActivity : AppCompatActivity() {
         cateList.add(ListItem("Design"))
 
 
+
         val listAdapter = ListAdapter(cateList)
         listAdapter.notifyDataSetChanged()
 
         recyclerview_list.adapter = listAdapter
         recyclerview_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        val recyclerview_main = findViewById<RecyclerView>(R.id.recyclerview_main)
+        recyclerview_main = findViewById<RecyclerView>(R.id.recyclerview_main)
 
         val itemList = ArrayList<MainItem>()
-
-
         itemList.add(MainItem(a, "이경민", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "And"))
         itemList.add(MainItem(a, "김명준", "응아니야 봉구스봉구스봉구스봉구스봉구스밥버거 보연유혁녹.셔홍겨ㅏ", "Web"))
         itemList.add(MainItem(a, "최시훈", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "iOS"))
@@ -105,6 +110,12 @@ class MainActivity : AppCompatActivity() {
         itemList.add(MainItem(a, "이경민", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "And"))
         itemList.add(MainItem(a, "이경민", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "And"))
         itemList.add(MainItem(a, "이경민", "으으으으으으으ㅡ으으으으으으으아누러뉴러ㅏㅠㅓㅣㅏㄴ류ㅓㅏㅠ너ㅠ러ㅏ뉴ㅓㅏ", "And"))
+
+
+
+
+
+
 
 
 
