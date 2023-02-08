@@ -47,9 +47,10 @@ class Profile : AppCompatActivity() {
 //            Log.d("상태","onclick_saveProfile_button")
             name.setValue(binding.name.text.toString())
             text.setValue(binding.introduction.text.toString())
-            profileImage.setValue(binding.profileimage.toString())
             Log.d("상태","saveProfile")
             Log.d("상태","name : $name text : $text profileImage : $profileImage")
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -59,6 +60,7 @@ class Profile : AppCompatActivity() {
         if(resultCode == Activity.RESULT_OK){
             if(requestCode == OPEN_GALLERY){
                 var profileImageUrl: Uri ?= data?.data
+                profileImage.setValue(profileImageUrl.toString())
 
                 try {
                     Glide.with(this)

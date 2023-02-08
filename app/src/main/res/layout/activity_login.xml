@@ -27,6 +27,8 @@
         android:backgroundTint="#E9ECEF"
         android:paddingStart="20dp"
         android:elevation="5dp"
+        android:maxLines="1"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -42,9 +44,9 @@
         android:backgroundTint="#E9ECEF"
         android:hint="id"
         android:paddingStart="20dp"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

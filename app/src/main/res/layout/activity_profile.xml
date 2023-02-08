@@ -26,6 +26,7 @@
 
     <EditText
         android:id="@+id/name"
+        android:maxLines="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
@@ -47,6 +48,7 @@
         android:backgroundTint="#E9ECEF"
         android:elevation="100dp"
         android:gravity="top"
+        android:maxLines="5"
         android:hint="introduction"
         android:padding="10dp"
         android:textColor="#80000000"
@@ -72,7 +74,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/selector_radio_button"
             android:backgroundTint="#B1FFF6"
-            android:text="Android"/>
+            android:text="And"/>
         <RadioButton
             android:layout_width="50dp"
             android:layout_height="20dp"
