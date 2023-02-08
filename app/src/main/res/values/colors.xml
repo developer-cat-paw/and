@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="android">#B1FFF6</color>
+    <color name="web">#B7FFB1</color>
+    <color name="ios">#FFB1B1</color>
+    <color name="sever">#B1B4FF</color>
+    <color name="ai">#F9FFB1</color>
+    <color name="design">#F4B1FF</color>
 </resources>

@@ -18,7 +18,7 @@ class MainRecyclerAdapter(val itemList: ArrayList<MainItem>) :
         var itemimage: ImageView = itemView.findViewById(R.id.item_image)
         var itemtitle: TextView = itemView.findViewById(R.id.item_title)
         var itemdetail: TextView = itemView.findViewById(R.id.item_detail)
-        var item: Button = itemView.findViewById<Button>(R.id.and)
+        var item: Button = itemView.findViewById<Button>(R.id.button)
     }
 
     // 1. Create new views (invoked by the layout manager)

@@ -41,7 +41,7 @@
 
 
             <Button
-                android:id="@+id/and"
+                android:id="@+id/button"
                 card_view:layout_constraintStart_toEndOf="@+id/item_title"
                 card_view:layout_constraintTop_toTopOf="@id/item_image"
                 android:text="And"

@@ -96,17 +96,6 @@ class MainActivity : AppCompatActivity() {
         recyclerview_list.adapter = listAdapter
         recyclerview_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-
-
-
-
-
-
-
-
-
-
-
         val recyclerview_main = findViewById<RecyclerView>(R.id.recyclerview_main)
 
         val itemList = ArrayList<MainItem>()

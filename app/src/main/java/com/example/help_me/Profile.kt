@@ -24,6 +24,7 @@ class Profile : AppCompatActivity() {
     private val name = database.getReference("name")
     private val text = database.getReference("text")
     private val profileImage = database.getReference("profileImage")
+//    lateinit private var profileImageUrl
 
     private val OPEN_GALLERY = 1
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class Profile : AppCompatActivity() {
         mbinding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
+//        binding.profileimage.setImageURI(profileImageUrl)
 
         binding.profileimageedit.setOnClickListener{
             val intent = Intent(Intent.ACTION_GET_CONTENT)
